@@ -1,17 +1,30 @@
+/*
+  Author: Jordan Austin
+  URL: github.com/missing
+
+  NOTE:
+    These are defaults meant to mimic the default unstyled brower look.
+    I highly recommend you style your details tags but don't do it here.
+    Just overwrite the style. Almost everything can be fully customized.
+    Anything that shouldn't be overwritten has an !important on it.
+*/
+
 .no-details details {
   display: block;
   width: 100%;
 }
 
 .no-details details > summary {
+  display: inline-block !important;
+  width: 100%  !important;
+  cursor: pointer;
+
   /* Comment out user-select below to allow text selection on summary */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-
-  cursor: pointer;
 }
 
 .no-details details summary:before {
@@ -24,9 +37,10 @@
 }
 
 .no-details details > *:not(summary) {
-  display: none;
+  display: none !important;
 }
 
 .no-details details[open] > *:not(summary) {
-  display: block;
+  /*If you need to display table or something like that feel free*/
+  display: block !important;
 }
