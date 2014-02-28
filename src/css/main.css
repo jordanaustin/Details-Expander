@@ -4,8 +4,7 @@
 }
 
 .no-details details > summary {
-  /* Uncomment user-select below to stop text selection on summary */
-
+  /* Comment out user-select below to allow text selection on summary */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -13,8 +12,6 @@
   user-select: none;
 
   cursor: pointer;
-
-
 }
 
 .no-details details summary:before {
@@ -26,10 +23,10 @@
   margin-right: .25em;
 }
 
-.no-details details p {
+.no-details details > *:not(summary) {
   display: none;
 }
 
-.no-details details[open] p {
+.no-details details[open] > *:not(summary) {
   display: block;
 }
