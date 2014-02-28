@@ -17,6 +17,8 @@
 .no-details details > summary {
   display: inline-block !important;
   width: 100%  !important;
+  min-height: 1.4em;
+  padding: 0.125em;
   cursor: pointer;
 
   /* Comment out user-select below to allow text selection on summary */
@@ -29,18 +31,28 @@
 
 .no-details details summary:before {
   content:'\25B6';
+  font-size: 0.8em;
   position: relative;
   display: inline-block;
-  width: auto;
-  height: auto;
-  margin-right: .25em;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.3em;
+  transform-origin: 0.4em 0.6em;
+}
+
+.no-details details[open] > summary:before {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .no-details details > *:not(summary) {
-  display: none !important;
+  display: none;
 }
 
 .no-details details[open] > *:not(summary) {
   /*If you need to display table or something like that feel free*/
-  display: block !important;
+  display: block;
 }

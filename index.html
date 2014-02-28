@@ -9,6 +9,41 @@
 				<script src="vendor/modernizr/modernizr.js"></script>
 				<script src="vendor/modernizr/feature-detects/elem-details.js"></script>
 				<script src="build/details-expander.min.js"></script>
+        <style>
+        	/* Example of custom content within the details element */
+	        .container {
+	  			background: #f7f7f7;
+	  			display: -webkit-flex;
+	  			display: flex;
+	  			-webkit-flex-direction: row-reverse;
+	  			flex-direction: row-reverse;
+			}
+
+			[open] .container {
+				/* If you're trying to use something other than display: block; Make sure you overwrite it, maybe add !important to make sure */
+				display: flex !important; 
+			}
+
+			.box {
+	  			padding: 20px;
+			}
+
+			.box-one {
+			  background: #eee;
+			  -webkit-flex: 2;
+			  flex: 2;
+			}
+			.box-two {
+			  background: #ddd;
+			  -webkit-flex: 1;
+			  flex: 1;
+			}
+			.box-three {
+			  background: #ccc;
+			  -webkit-flex: 1;
+			  flex: 1;
+			}
+        </style>
 	</head>
 	<body>
 		<details>
@@ -17,10 +52,19 @@
 		</details>
 		<details>
 			<summary>Lots of good stuff hidden here</summary>
-			<p>Look! A cat!</p>
-			<img src="http://placekitten.com/g/200/300">
+			<p>Look! Flexbox in here!</p>
+      		<div class="container">
+  				<div class="box box-one">
+    				<h2>Box 1</h2>
+  				</div>
+  				<div class="box box-two">
+    				<h2>Box 2</h2>
+  				</div>
+  				<div class="box box-three">
+    				<h2>Box 3</h2>
+      			</div>
+      		</div>
 		</details>
-
 		<h2>You can even nest detail elements inside another</h2>
 		<details>
 			<summary>Layer One</summary>
