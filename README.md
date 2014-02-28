@@ -1,7 +1,7 @@
 Details-Expander
 ================
 
-A pure JavaScript polyfill for the html5 details element.
+A <details> element polyfil with minimal CSS and JavaScript.
 
 <h2>Dependancies</h2>
 Currently dependant on Modernizr for detecting if the details element is supported.
