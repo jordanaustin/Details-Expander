@@ -1,0 +1,35 @@
+.no-details details {
+  display: block;
+  width: 100%;
+}
+
+.no-details details > summary {
+  /* Uncomment user-select below to stop text selection on summary */
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  cursor: pointer;
+
+
+}
+
+.no-details details summary:before {
+  content:'\25B6';
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-right: .25em;
+}
+
+.no-details details p {
+  display: none;
+}
+
+.no-details details[open] p {
+  display: block;
+}
