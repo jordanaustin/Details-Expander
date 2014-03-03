@@ -21,12 +21,9 @@ The polyfill is a small CSS file and this simple javascript file. Include these 
 
 
 <h2>Dependancies</h2>
-Currently dependant on Modernizr for detecting if the details element is supported. 
+No dependancies like jQuery however I do recommend using Modernizr for the feature detect of elem-details. Because I didn't want to include the entire Modornizr library I'm only including the feature detect code as a sperate file. Include this about the actual polyfill js file (build/details-expander.min.js).
 
-I recommend building your own modernizr from http://modernizr.com and make sure to include the elem-details feature detect. 
+    <script src="build/has-details.min.js"></script>
 
-If you want to use the one included here include include the following above the details-expander.min.js script:
-
-    <script src="vendor/modernizr/modernizr.js"></script>
-    <script src="vendor/modernizr/feature-detects/elem-details.js"></script>				
+All credit for this feature detect goes to @mathiasbynens who created it. Find it here along with his own polyfill for the details element here: http://mathiasbynens.be/notes/html5-details-jquery
 
