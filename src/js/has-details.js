@@ -1,11 +1,15 @@
-// By @mathias, based on http://mths.be/axh
-Modernizr.addTest('details', function() {
-    var doc = document,
-        el = doc.createElement('details'),
+/* 
+This is the feature detect used in mondernizr but created by
+Mathias Bynens: http://mathiasbynens.be/notes/html5-details-jquery
+All credit for this feature detect goes to Mathias Bynens
+*/
+
+var isDetailsSupported = (function(doc) {
+    var el = doc.createElement('details'),
         fake,
         root,
         diff;
-    if (!('open' in el)) { // return early if possible; thanks @aFarkas!
+    if (!('open' in el)) {
         return false;
     }
     root = doc.body || (function() {
@@ -20,6 +24,12 @@ Modernizr.addTest('details', function() {
     el.open = true;
     diff = diff != el.offsetHeight;
     root.removeChild(el);
-    fake && root.parentNode.removeChild(root);
+    if (fake) {
+        root.parentNode.removeChild(root);
+    }
     return diff;
-});
+}(document));
+
+if (!isDetailsSupported) {
+    document.documentElement.className += ' no-details';
+}
