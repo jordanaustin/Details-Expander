@@ -25,5 +25,5 @@ No dependancies like jQuery however I do recommend using Modernizr for the featu
 
     <script src="build/has-details.min.js"></script>
 
-All credit for this feature detect goes to @mathiasbynens who created it. Find it here along with his own polyfill for the details element here: http://mathiasbynens.be/notes/html5-details-jquery
+All credit for this feature detect goes to @mathiasbynens who created it. Find it here along with his own jQuery polyfill for the details element here: http://mathiasbynens.be/notes/html5-details-jquery
 
